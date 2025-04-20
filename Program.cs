@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace jogopokemons
 {
@@ -16,70 +16,70 @@ namespace jogopokemons
             Console.Write("Você é um treinador pokémon e ");
             Console.Write("possui o ");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("Charmander (tipo Fogo)");
+            Console.Write("CHARMANDER (tipo Fogo)");
             Console.ResetColor();
             Console.Write(", ");
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.Write("Squirtle (tipo Água) ");
+            Console.Write("SQUIRTLE (tipo Água) ");
             Console.ResetColor();
             Console.Write("e ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Pikachu (tipo Elétrico) ");
+            Console.Write("PIKACHU (tipo Elétrico) ");
             Console.ResetColor();
             Console.WriteLine("para batalhar contra ");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("Glaceon (tipo Gelo)");
+            Console.Write("GLACEON (tipo Gelo)");
             Console.ResetColor();
             Console.Write(", ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.Write("Flareon (tipo Fogo) ");
+            Console.Write("FLAREON (tipo Fogo) ");
             Console.ResetColor();
             Console.Write("e ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write("Pidgey (tipo Voador)");
+            Console.Write("PIDGEY (tipo Voador)");
             Console.ResetColor();
             Console.WriteLine(". Na batalha, você deve usar um pokémon que possui para cada pokémon inimigo.");
             Console.WriteLine(" ");
 
-            //Batalhas 
-            Glaceon:
+        //Batalhas 
+        GLACEON:
             Console.Write("A primeira batalha é contra ");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("Glaceon");
+            Console.Write("GLACEON");
             Console.ResetColor();
             Console.Write(". Você escolhe qual dos seus três pokémons? ");
             Console.WriteLine("(Digite apenas o nome sem o tipo do lado).");
 
-            string escolhido1 = Console.ReadLine();
+            string escolhido1 = Console.ReadLine().ToUpper();
 
             switch (escolhido1)
             {
-                case "Charmander":
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Seu Charmander derrotou Glaceon pois fogo tem vantagem contra gelo!");
-                Console.ResetColor();
-                goto Flareon;
+                case "CHARMANDER":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Seu Charmander derrotou Glaceon pois fogo tem vantagem contra gelo!");
+                    Console.ResetColor();
+                    goto FLAREON;
 
-                case "Squirtle":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Glaceon derrotou seu Squirtle pois gelo tem vantagem contra água... Tente de novo!");
-                Console.ResetColor();
-                goto Glaceon;
+                case "SQUIRTLE":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Glaceon derrotou seu Squirtle pois gelo tem vantagem contra água... Tente de novo!");
+                    Console.ResetColor();
+                    goto GLACEON;
 
-                case "Pikachu":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Seu Pikachu não tem vantagens contra Glaceon... Tente de novo!");
-                Console.ResetColor();
-                goto Glaceon;
+                case "PIKACHU":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Seu Pikachu não tem vantagens contra Glaceon... Tente de novo!");
+                    Console.ResetColor();
+                    goto GLACEON;
 
                 default:
-                Console.WriteLine("Não entendi!");
-                break;
+                    Console.WriteLine("Não entendi!");
+                    break;
             }
-            goto Glaceon;
+            goto GLACEON;
 
 
-            Flareon: 
+        FLAREON:
             Console.Write("A segunda batalha é contra ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.Write("Flareon");
@@ -87,72 +87,71 @@ namespace jogopokemons
             Console.Write(". Você escolhe qual dos seus três pokémons? ");
             Console.WriteLine("(Digite apenas o nome sem o tipo do lado).");
 
-            string escolhido2 = Console.ReadLine();
+            string escolhido2 = Console.ReadLine().ToUpper();
 
             switch (escolhido2)
             {
-                case "Charmander":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Seu Charmander já batalhou, ele está exausto! Escolha outro.");
-                Console.ResetColor();
-                goto Flareon;
+                case "CHARMANDER":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Seu Charmander já batalhou, ele está exausto! Escolha outro.");
+                    Console.ResetColor();
+                    goto FLAREON;
 
-                case "Squirtle":
-                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Seu squirtle derrotou Flareon pois água tem vantagem contra fogo!");
-                Console.ResetColor();
-                goto Pidgey;
+                case "SQUIRTLE":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Seu squirtle derrotou Flareon pois água tem vantagem contra fogo!");
+                    Console.ResetColor();
+                    goto PIDGEY;
 
-                case "Pikachu":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Seu Pikachu não tem vantagem contra Flareon");
-                Console.ResetColor();
-                goto Flareon;
+                case "PIKACHU":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Seu Pikachu não tem vantagem contra Flareon");
+                    Console.ResetColor();
+                    goto FLAREON;
 
                 default:
-                Console.WriteLine("Não entendi!");
-                break;
+                    Console.WriteLine("Não entendi!");
+                    break;
             }
-            goto Pidgey;
+            goto PIDGEY;
 
-            Pidgey:
+        PIDGEY:
             Console.Write("A última batalha é contra ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write("Pidgey");
+            Console.Write("PIDGEY");
             Console.ResetColor();
             Console.Write(". Você escolhe qual dos seus três pokémons? ");
             Console.WriteLine("(Digite apenas o nome sem o tipo do lado).");
 
-            string escolhido3 = Console.ReadLine();
+            string escolhido3 = Console.ReadLine().ToUpper();
 
-            switch(escolhido3)
+            switch (escolhido3)
             {
-                case "Charmander":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Seu Charmander já batalhou, ele está exausto! Escolha outro.");
-                Console.ResetColor();
-                goto Pidgey;
+                case "CHARMANDER":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Seu Charmander já batalhou, ele está exausto! Escolha outro.");
+                    Console.ResetColor();
+                    goto PIDGEY;
 
-                case "Squirtle":
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Seu Squirtle já batalhou, ele está exausto! Escolha outro.");
-                Console.ResetColor();
-                goto Pidgey;
+                case "SQUIRTLE":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Seu Squirtle já batalhou, ele está exausto! Escolha outro.");
+                    Console.ResetColor();
+                    goto PIDGEY;
 
-                case "Pikachu":
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Seu Pikachu derrotou Pidgey pois o tipo Elétrico tem vantagem contra voador!");
-                Console.ResetColor();
-                goto Fim;
+                case "PIKACHU":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Seu Pikachu derrotou Pidgey pois o tipo Elétrico tem vantagem contra voador!");
+                    Console.ResetColor();
+                    goto FIM;
 
                 default:
-                Console.WriteLine("Não entendi!");
-                break;
+                    Console.WriteLine("Não entendi!");
+                    break;
             }
-            goto Fim;
+            goto FIM;
 
-
-            Fim:
+        FIM:
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Write("Parabéns! Você derrotou todos os pokémons inimigos!");
